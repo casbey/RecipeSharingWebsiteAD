@@ -1,9 +1,9 @@
 ## 1. Introduction
 
-    >1.1 Purpose: The purpose of this web platform to upload, search and share food recipes 
+# 1.1 Purpose: The purpose of this web platform to upload, search and share food recipes 
         amongst the users and to rate and favorite those said recipes and the ability to comment under the recipes their opinions, etc.
 
-    >1.2 Scope: The web platform will include the following functionalities:
+# 1.2 Scope: The web platform will include the following functionalities:
                 -[user authentication, recipe managment(creating, uploading, modifying, deleting), commenting, rating, favoriting, recipe searching with filters]
     
                 The constraints of the web platform:
@@ -12,7 +12,7 @@
                 The following functionalities will be excluded from the project:
                 -[regulations, guidelines, recipe recommendation algorithms, direct user support via chat or phone]
                 
-    >1.5 Overview: 
+# 1.3 Overview: 
 
         1. - Introduction: Shares knowledge about the technical and non-technical aspects, functionalities and bacground of the project to gain a clear and deep understanding what the project is about, what it can and can not do.
 
