@@ -46,7 +46,9 @@ The website is designed for an audience expert in cooking, or interested in tryi
 * **Casual Users**: Users with a basic knowledge in cooking, trying to improve as cooks at home with the addition of new recipes to their collection.
 * **Professional Chefs**: The platform is a great opportunity for well-known chefs, or rather less known experts to promote their recipes and help beginners.
 * **Home Cooks**: The type of users who already have an intermediate knowledge about cooking, and are just trying to share their experience on the website and look for alternatives of cooking their dishes. \
-We can divide the users into two classes on the website.
+<br/><br/>
+
+We can divide the users into two classes on the website:
 1. **Registered users**: The users who passed the age of 18 and are also registered to the website. They can manage their profile, and have the benefit of uploading recipes and interacting with other uploaded recipes.
 2. **Guests**: Unregistered users, who can only look at the uploaded recipes, and use the search function, but they cannot interract with other recipes or upload.
 
@@ -78,6 +80,8 @@ The primary interface components include:
 Wireframes and Mockups:
 1. **Wireframes**: Preliminary wireframes will outline the layout and flow of each page. These will show the placement of elements like the search bar, recipe cards, comments section, and form inputs.
 2. **Mockups**: Full-color mockups, adhering to a modern design style, will demonstrate how the final UI will appear, including typography, colors, and button styles. \
+<br/><br/>
+
 Design Considerations:
 * **Navigation Bar**: Persistent across all pages, providing quick links to home, search, user profile, and recipe upload options.
 * **Responsiveness**: The layout will adjust dynamically for different devices, ensuring a smooth user experience.
@@ -138,3 +142,42 @@ Portability will be a core feature of the Recipe Sharing Website, ensuring that 
 * **Cross-Browser Support**: The website will function smoothly across all modern web browsers, including Google Chrome, Mozilla Firefox, Safari, and Microsoft Edge.
 * **Mobile-Friendly Design**: The site will be optimized for touch interfaces on mobile devices, ensuring that users can interact with the site (e.g., browsing, uploading recipes) just as effectively on mobile as on desktop.
 
+# 6. Other Non-functional Requirements
+This chapter captures additional non-functional requirements related to legal compliance and data management, ensuring the system adheres to all necessary regulations and handles data responsibly.
+
+## 6.1 Legal or Regulatory Requirements
+The Recipe Sharing Website will adhere to all relevant legal and regulatory requirements, particularly regarding user privacy and data protection. The key considerations are:
+* **Data Consent**: Users will be required to provide explicit consent before their personal information (e.g., name, email) is collected or used. A clear privacy policy will explain how user data is handled.
+* **Right to Access and Deletion**: Users will have the ability to view and request the deletion of their personal data (such as profiles and comments) at any time. This will be managed through a user dashboard where users can access and manage their data.
+* **Copyright and Intellectual Property Laws**: Users who upload recipes will agree to a terms of service policy that clarifies their ownership of the content they share. Users will be notified that the platform is not liable for any copyright infringements in uploaded recipes.
+* **User-generated Content**: Recipe authors will maintain ownership of their content, but they will grant the platform a non-exclusive license to display and distribute their recipes on the site.
+
+## 6.2 Data Management Requirements
+The Recipe Sharing Website will have robust data management practices in place to ensure efficient storage, retrieval, and protection of user data and content. The following measures will be implemented:
+1. **Data Storage**:
+* **User Profiles**: User profiles will include data such as usernames, email addresses, passwords. All sensitive information will be stored in a secure, encrypted format in the database (MySQL).
+* **Recipes**: Each recipe will be stored with information such as title, ingredients, instructions, user ratings, and comments. Recipes will be indexed to allow for efficient searching by title or ingredients.
+* **Comments**: Comments on recipes will be associated with both the recipe and the user who posted them. They will be stored in a relational database with appropriate foreign key relationships.
+* **Favourites**: Users will be able to save recipes to their favourites. This data will be stored in a user’s profile and will allow easy retrieval from the database.
+* **Data Retention**: User data, including profiles and recipes, will be retained for as long as users remain active on the platform. Inactive users (i.e., those who do not log in for over a year) may be contacted, and if necessary, their accounts will be archived or deleted based on their preferences.
+2. **Data Integrity and Consistency**:
+The system will enforce data validation rules to ensure that the data entered by users is complete and in the correct format (e.g., valid email addresses, non-empty recipe fields).
+
+# 7. Appendix
+
+## 7.1 Glossary of Terms
+This section defines key terms and concepts used throughout the SRS document.
+* **UI (User Interface)**: The visual components through which a user interacts with the website, such as buttons, forms, and menus.
+* **UX (User Experience)**: The overall experience a user has when interacting with the website, including ease of use, accessibility, and performance.
+* **API (Application Programming Interface)**: A set of functions and procedures allowing different software applications to communicate with each other.
+
+## 7.2 External Resources and References
+* **Bootstrap**: The front-end framework used for responsive design. \
+URL: https://getbootstrap.com
+* **MySQL Documentation**: Official documentation for MySQL database, which is used for storing user profiles, recipes, and comments. \
+URL: https://dev.mysql.com/doc/
+
+## 7.3 Notes on Future Development
+* **Mobile App**: While the initial release of the Recipe Sharing Website will be web-based, a future version may include a mobile app for Android and iOS.
+* **Advanced Search Features**: In a future update, the search functionality could be enhanced to include filters such as recipe preparation time, difficulty level, and dietary preferences (e.g., vegan, gluten-free).
+* **Recipe Sharing via Social Media**: Another planned feature is the integration of social media sharing options, allowing users to post their recipes directly to platforms like Facebook, Twitter, and Instagram.
