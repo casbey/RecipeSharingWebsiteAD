@@ -1,9 +1,9 @@
-## 1. Introduction
+# 1. Introduction
 
-# 1.1 Purpose: The purpose of this web platform to upload, search and share food recipes 
+## 1.1 Purpose: The purpose of this web platform to upload, search and share food recipes 
         amongst the users and to rate and favorite those said recipes and the ability to comment under the recipes their opinions, etc.
 
-# 1.2 Scope: The web platform will include the following functionalities:
+## 1.2 Scope: The web platform will include the following functionalities:
                 -[user authentication, recipe managment(creating, uploading, modifying, deleting), commenting, rating, favoriting, recipe searching with filters]
     
                 The constraints of the web platform:
@@ -12,7 +12,7 @@
                 The following functionalities will be excluded from the project:
                 -[regulations, guidelines, recipe recommendation algorithms, direct user support via chat or phone]
                 
-# 1.3 Overview: 
+## 1.3 Overview: 
 
         1. - Introduction: Shares knowledge about the technical and non-technical aspects, functionalities and bacground of the project to gain a clear and deep understanding what the project is about, what it can and can not do.
 
@@ -28,11 +28,12 @@
 
         7. - Appendix: Any additional supporting materials, diagrams, or notes.
 
-## 2. Overall Description
-# 2.1 Product Perspective
+# 2. Overall Description
+
+## 2.1 Product Perspective
 The Recipe Sharing Website is a standalone web platform, designed for users to share, and discover new recipes from other users. The three core systems that allows the functioning of the website are the frontend interface used for user interactions, the backend API for the business logic, and a database for storing and managing user information, recipes, and the outcome of user interactions such as comments and ratings.
 
-# 2.2 Product Functions
+## 2.2 Product Functions
 The platform offers the following main functions:
 * User registration and login
 * Recipe control (submission, editing, viewing, deletion)
@@ -40,7 +41,7 @@ The platform offers the following main functions:
 * User interactions with other recipes (comment, favourite, rating)
 * User profile management (viewing, update)
 
-# 2.3 User Classes and Characteristics
+## 2.3 User Classes and Characteristics
 The website is designed for an audience expert in cooking, or interested in trying out new recipes.
 * **Casual Users**: Users with a basic knowledge in cooking, trying to improve as cooks at home with the addition of new recipes to their collection.
 * **Professional Chefs**: The platform is a great opportunity for well-known chefs, or rather less known experts to promote their recipes and help beginners.
@@ -54,7 +55,7 @@ The recipe sharing website follows the following constraints:
 * The recipe form description must be limited to 5000 characters (with spaces) 
 * The website must support 100 users at least
 * It must be compatible with the modern web browers, and must support access from mobile devices as well
-•	Security measures in terms of password hashing must be developed
+* Security measures in terms of password hashing must be developed
 
 ## 2.5 Assumptions and Dependecies
 * The user must enter the website through a modern web browser and devices.
@@ -63,3 +64,40 @@ The recipe sharing website follows the following constraints:
 ## 2.6 System Environment
 * **Client Side**: Google Chrome, Mozzila Firefox, Microsoft Edge, and Safari web browers, and any modern device
 * **Server Side**: Apache webserver, PHP 7.x for server-side requests, MySQL databse, and Git for version control
+
+# 4. External Interface Requirements
+
+## 4.1 User Interfaces
+The Recipe Sharing Website will feature a clean, intuitive, and responsive web interface to enhance user experience across modern devices. 
+The primary interface components include:
+* **Home Page**: Display popular and recently uploaded recipes. Users can search by recipe name or ingredients directly from this page.
+* **Recipe Detail Page**: Shows the recipe, including the list of ingredients, instructions, images, ratings, comments, and a "Favourite" button.
+* **User Profile Page**: Displays the user’s uploaded recipes, favourite recipes, and account details.
+* **Login and Signup Forms**: Simple and clean forms to allow users to register or log in with email and password.
+* **Recipe Upload Form**: A form where users can enter recipe details (name, ingredients, instructions, etc.).
+Wireframes and Mockups:
+* **Wireframes**: Preliminary wireframes will outline the layout and flow of each page. These will show the placement of elements like the search bar, recipe cards, comments section, and form inputs.
+* **Mockups**: Full-color mockups, adhering to a modern design style, will demonstrate how the final UI will appear, including typography, colors, and button styles.
+Design Considerations:
+* **Navigation Bar**: Persistent across all pages, providing quick links to home, search, user profile, and recipe upload options.
+* **Responsiveness**: The layout will adjust dynamically for different devices, ensuring a smooth user experience.
+
+## 4.2 Hardware Interfaces
+The Recipe Sharing Website will require hardware resources both for user interactions and for backend operations. The following hardware interfaces will be utilized:
+* **Web Server**: An Apache web server will host the application and serve web pages to users.
+* **Database Server**: A MySQL database will be used to store user accounts, recipe data, comments, ratings, and favorites.
+Hardware Requirements:
+* **CPU and Memory**: The web and database servers should be configured to handle at least 100 concurrent users, with scalable hardware resources (CPU, memory) depending on the load.
+* **Backup Hardware**: Routine database and file backups will be stored in a secondary cloud location to ensure data persistence and disaster recovery.
+
+## 4.3 Software Interfaces
+Several software components and third-party services will be integrated into the Recipe Sharing Website for specific functionalities:
+* **Database**: MySQL will be used for managing all structured data.
+* **Search Functionality**: The website will implement full-text search on recipes using built-in MySQL functions or a dedicated search service for advanced search and filtering by name or ingredients.
+* **Frontend Framework**: The user interface will be developed using React.js (or an equivalent modern JavaScript framework), while adhering to best practices for responsive and dynamic content delivery.
+
+## 4.4 Communication Interfaces
+The Recipe Sharing Website will use the following communication protocols to ensure secure and efficient interaction between the client, server, and external services:
+* **HTTPS** (Hypertext Transfer Protocol Secure): All communication between the client (user) and the server will be encrypted using HTTPS. This will ensure the protection of user data, including login credentials and personal information.
+* **RESTful API**: The backend server will expose a RESTful API that will communicate with the frontend using JSON over HTTP. This API will handle all CRUD (Create, Read, Update, Delete) operations for recipes, users, comments, and ratings.
+
