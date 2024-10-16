@@ -66,6 +66,33 @@ The recipe sharing website follows the following constraints:
 * **Client Side**: Google Chrome, Mozzila Firefox, Microsoft Edge, and Safari web browers, and any modern device
 * **Server Side**: Apache webserver, PHP 7.x for server-side requests, MySQL databse, and Git for version control
 
+# 3. System features
+
+## 3.1 User authentication
+* **Description:** Users can sign up, log in and manage their accounts.
+* **Functional requirements:** Users can create an account, users can log in via email/username and password, (password recovery maybe??).
+* **Non-functional requirements:** User password protection and managable time for login/logout.
+
+## 3.2 Recipe managment
+* **Description:** Users can upload, edit and delete recipes.
+* **Functional requirements:** Users can add a new recipe, users can edit their own existing recipes and recipe information includes the title, description, ingredients and steps.
+* **Non-functional requirements:** Support for larger images and swiftly manage the database.
+
+## 3.3 Recipe search
+* **Description:** Search recipes by names and ingredients.
+* **Functional requirements:** User can search for recipes by name, user can filter search with ingredients.
+* **Non-functional requirements:** Fast and accurate search results.
+    
+## 3.4 Rating and commenting
+* **Description:** Users can rate recipes and comment under them.
+* **Functional requirements:** Users can leave comments under recipes, users can rate recipes on a scale from 1-5.
+* **Non-functional requirements:** Comments loaded in in a managable time and real-time update for ratings.
+    
+## 3.5 Favorites
+* **Description:** Users can mark recipes as their favorites for easy access later.
+* **Functional requirements:** Users can favorite recipes, users can access their favorite recipes in a favorite list.
+* **Non-Functional requirements:** Favorite list loading time should be fast and not depending on the size of the list.
+
 # 4. External Interface Requirements
 
 ## 4.1 User Interfaces
