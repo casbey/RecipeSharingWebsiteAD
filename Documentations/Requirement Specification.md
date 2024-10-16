@@ -1,32 +1,31 @@
 # 1. Introduction
 
-## 1.1 Purpose: The purpose of this web platform to upload, search and share food recipes 
-        amongst the users and to rate and favorite those said recipes and the ability to comment under the recipes their opinions, etc.
+## 1.1 Purpose: 
+The purpose of this web platform to upload, search and share food recipes amongst the users and to rate and favorite those said recipes and the ability to comment under the recipes their opinions, etc.
 
-## 1.2 Scope: The web platform will include the following functionalities:
-                -[user authentication, recipe managment(creating, uploading, modifying, deleting), commenting, rating, favoriting, recipe searching with filters]
+## 1.2 Scope: 
+* **The web platform will include the following functionalities:**
+user authentication, recipe managment(creating, uploading, modifying, deleting), commenting, rating, favoriting, recipe searching with filters
     
-                The constraints of the web platform:
-                -[The web page will be supported by Windows and will be usable via any web browser windows can run]
+* **The constraints of the web platform:**
+The web page will be supported by Windows and will be usable via any web browser windows can run
 
-                The following functionalities will be excluded from the project:
-                -[regulations, guidelines, recipe recommendation algorithms, direct user support via chat or phone]
+* **The following functionalities will be excluded from the project:**
+regulations, guidelines, recipe recommendation algorithms, direct user support via chat or phone
                 
 ## 1.3 Overview: 
-
-        1. - Introduction: Shares knowledge about the technical and non-technical aspects, functionalities and bacground of the project to gain a clear and deep understanding what the project is about, what it can and can not do.
-
-        2. - Overall Description: Describes how the project will fit into the bigger system, lists it's features and functionalities and also the constraints, limitations and dependencies regarding the web platform, defines the users and their different privileges and lists the supported operating platforms.
-
-        3. - Features: Dives deeper into all of the project's features and describes all of them in more detail about the functional and non-functional requirements.
-
-        4. - Interface Requirements: Describes the UI's design principles and mockups, the required hardware for the web platform to run, what software interfaces will be used and how the system will communicate.
-
-        5. - System Attributes: Will outline the security measures, define the performance target, describe any future expansion possibilities, lay down how the platform is user friendly, describes how the platform can be maintained and updated and the difficulty of said actions and will mention any plan of making the system portable to other devices.
-
-        6. - Other Non-functional Requirements: This chapter will describe in more detail of any other non-functional requirements like legal or regulatory requirements.
-
-        7. - Appendix: Any additional supporting materials, diagrams, or notes.
+* **Introduction:**
+Shares knowledge about the technical and non-technical aspects, functionalities and bacground of the project to gain a clear and deep understanding what the project is about, what it can and can not do.
+* **Overall Description:**
+Describes how the project will fit into the bigger system, lists it's features and functionalities and also the constraints, limitations and dependencies regarding the web platform, defines the users and their different privileges and lists the supported operating platforms.
+* **Features:**
+Dives deeper into all of the project's features and describes all of them in more detail about the functional and non-functional requirements.
+* **Interface Requirements:**
+Describes the UI's design principles and mockups, the required hardware for the web platform to run, what software interfaces will be used and how the system will communicate.
+* **System Attributes:** Will outline the security measures, define the performance target, describe any future expansion possibilities, lay down how the platform is user friendly, describes how the platform can be maintained and updated and the difficulty of said actions and will mention any plan of making the system portable to other devices.
+* **Other Non-functional Requirements:**
+This chapter will describe in more detail of any other non-functional requirements like legal or regulatory requirements.
+* **Appendix:** Any additional supporting materials, diagrams, or notes.
 
 # 2. Overall Description
 
