@@ -31,7 +31,15 @@ function more(){
     require_once VIEWS_DIR.'recipes/more.php';
 }
 function del(){
-    echo 'delete!';
+    $id = get_p();
+    $success = executeStatement('DELETE FROM recipes WHERE recipe_id = :recipe_id', ['recipe_id' => $id]);
+    
+    if($success === TRUE){
+        header('Location:'.BASE_URL.'?E=recipes&M=lista');
+    }
+    else{
+        die('Deletion not successful.');
+    }
     
 }
 function modify(){
