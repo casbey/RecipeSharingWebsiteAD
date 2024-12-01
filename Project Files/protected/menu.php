@@ -11,21 +11,16 @@
             'extra' => [],
             'childs' => [
               [
-                 'href' => '#',
+                 'href' => BASE_URL.'index.php?E=recipes&M=lista',
                  'title' => 'List recipes',
                  'extra' => [ 'target' => '_blank'],
               ],
               [
-                 'href' => '#',
+                 'href' => BASE_URL.'index.php?E=recipes&M=add',
                  'title' => 'Submit recipe',
                  'extra' => [ 'target' => '_blank'],
               ],
             ]
-        ],
-        [
-            'href' => '#',
-            'title' => 'FAQ',
-            'extra' => ['style' => 'color:white;', 'target' => '_blank'],
         ]
     ];
     require_once CORE_DIR.'views.php';
