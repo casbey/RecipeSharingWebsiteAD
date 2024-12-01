@@ -1,3 +1,3 @@
 <?php
-    echo 'modify!';
+    echo 'Footer!';
 ?>

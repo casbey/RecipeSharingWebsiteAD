@@ -43,7 +43,18 @@ function del(){
     
 }
 function modify(){
-    echo 'modify!';
+    if(!filter_has_var(INPUT_POST, 'submit') || 
+      filter_input(INPUT_POST, 'submit', FILTER_VALIDATE_INT) != 1 ){
+         require VIEWS_DIR.'recipes/modify.php';
+    }
+    else{
+        $recipenameM = filter_input(INPUT_POST, 'recipename', FILTER_SANITIZE_STRING);
+        $ingredientsM = filter_input(INPUT_POST, 'ingredients', FILTER_SANITIZE_STRING);
+        $servingsM = filter_input(INPUT_POST, 'servings', FILTER_VALIDATE_INT);
+        $instructionsM = filter_input(INPUT_POST, 'instructions', FILTER_SANITIZE_STRING);
+    }
+    $result = executeStatement('UPDATE recipes SET recipename = :recipenameM, ingredients = :ingredientsM, servings = :servingsM, instructions = :instructionsM WHERE recipe_id = :recipe_id', 
+            ['recipenameM' => $recipenameM, 'ingredientsM' => $ingredientsM, 'servingsM' => $servingsM, 'instructionsM' => $instructionsM, 'recipe_id' => $recipe_id]);
 }
 function add(){
       if(!filter_has_var(INPUT_POST, 'submit') || 
