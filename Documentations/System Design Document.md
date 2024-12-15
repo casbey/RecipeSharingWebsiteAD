@@ -8,7 +8,7 @@ The purpose of this paragraph is to define the scope of this website.
 
 * **User Authentication**: Users can register and login into the website.
 
-* **Recipe managment**: Logged in users can
+* **Recipe management**: Logged in users can
 - Create and upload recipes.
 - Modify their uploaded recipes.
 - Delete their uploaded recipes.
@@ -31,6 +31,76 @@ The platform for the webpage is Windows and will be supported by any modern web 
 ## 1.4 Out of scope features
 
 Rules and regulations, guidelines, recipe recommendation algorithms, direct user support via chat or phone.
+
+# 3. Requirements
+
+## 3.1 Functional requirements
+
+These requirements describe the core functionalities the system must support.
+
+### User authentication
+
+- Users can register via an email and a password.
+- Users cam login and logout securely.
+- Users can recover their password via email.
+
+### Recipe management
+
+* **Logged in users can:**
+- Create their own recipe with:
+   - Title.
+   - Ingredients.
+   - Preparation steps.
+- Edit or delete their own recipe.
+
+### Interaction
+* **Logged in users can:**
+- Rate recipes through a 1-5 rating system.
+- Comment, modify their own and delete their own comments under other recipes.
+- Favorite other recipes.
+
+### Search
+* **All users can:**
+- Search for any recipe with filters.
+
+### Acces control
+* **Guests:**
+- Can search for and view recipes.
+- Can not post, modify, delete recipes, can not use the comment, rating and favoriting systems.
+* **Logged in users:**
+- Can search for and view recipes.
+- Can use the recipe management, comment, rating, favoriting systems.
+
+## 3.2 Non-functional requirements
+
+### Performance
+- The system sould support a relatively big number of users concurrently.
+- Search results should load within 2 seconds under normal load.
+
+### Usability
+- The platform must be responsive on Windows desktop devices.
+- The platform should have an intuitive interface with clear navigation.
+
+### Security
+- Passwords must be securely hashed and stored.
+- Implement input validation to prevent XSS and SQL injection.
+- Only recipe creators can edit or delete their own recipes.
+
+### Scalability
+The website will be designed with scalability in mind, enabling it to handle increased traffic and data growth over time. The system will allow:
+* **Database Growth**: The database will be capable of scaling to be able to handle larger numbers of recipes, comments, user data, and ratings without performance loss. Database sharding and indexing strategies will be implemented for performance optimization.
+
+### Reliability
+To ensure the prevention of data loss the database will be backed up daily.
+
+### Maintability
+The codebase will be modular, easy to see through and documented for ease of updates.
+
+### Assumptions and dependencies
+- Users will have an operable Windows desktop.
+- Users will have access to a stable internet connection and modern browsers (Chrome, Firefox, Opera).
+- Apache will provide the web server for the system.
+- MySQL will provide the database server for the system.
 
 # 8. Database Plan
 The database plan defines the tables and their relationships within the system. To ensure data consistency and integrity, the database is designed to meet **Third Normal Form (3NF)** requirements. Additionally, stored procedures may be implemented to streamline and optimize key operations.
