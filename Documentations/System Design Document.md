@@ -102,6 +102,71 @@ The codebase will be modular, easy to see through and documented for ease of upd
 - Apache will provide the web server for the system.
 - MySQL will provide the database server for the system.
 
+# 5. Physical environment
+
+## 5.1. Hosting enviroment
+The project will be hosted locally on a development machine or a shared server using XAMPP, which provides an all-in-one solution for Apache, PHP, and MySQL.
+
+### Development Setup
+
+- **Software Requirements**:
+  - XAMPP (latest stable version).
+  - PHP 8.0+.
+  - Apache 2.4+ (built into XAMPP).
+  - MySQL 8.0+ (built into XAMPP).
+  - Text editor or IDE (VS Code).
+
+- **Hardware Requirements**:
+  - Minimum:
+    - Dual-core processor.
+    - 4 GB RAM.
+    - 20 GB free storage for the database and project files.
+  - Recommended:
+    - Quad-core processor.
+    - 8 GB RAM for smoother performance.
+
+### Deployment
+
+- The website will run on:
+  - Localhost during development.
+
+### Database Server
+
+* **MySQL Database**:
+  - Used to store:
+    - User data
+    - Recipe data
+* **Tables**:
+- Users
+- Recipes
+- Comments
+- Ratings
+- Favorites
+
+## 5.2 Network configuration
+
+* **Access**:
+  - Users will access the website via `http://localhost` or the assigned LAN IP address.
+* **Firewall**:
+  - Ensure XAMPP’s Apache and MySQL ports are accessible for internal testing only.
+  - Disable external access for security unless explicitly required.
+
+## 5.3 Development enviroment
+
+* **Team collaboration**:
+   - Version control system: Git is used for source code management.
+   - The project is accessible to all of the team members.
+
+* **Testing enviroment**
+   - The development and testing will be done on each team member's Windows computer.
+   - Multiple modern windows web browsers will be used (Firefox, Chrome, Opera) for cross-browser testing.
+
+## 5.4 Backup and recovery
+
+* **Database Backups**:
+  - Use phpMyAdmin to export the database as an SQL file regularly.
+  - Store backups in a secure folder or a cloud service like Google Drive.
+
 # 8. Database Plan
 The database plan defines the tables and their relationships within the system. To ensure data consistency and integrity, the database is designed to meet **Third Normal Form (3NF)** requirements. Additionally, stored procedures may be implemented to streamline and optimize key operations.
 
