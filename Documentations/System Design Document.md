@@ -1,3 +1,37 @@
+# 1. The Scope
+
+## 1.1 Purpose:
+
+The purpose of this paragraph is to define the scope of this website.
+
+## 1.2 In scope features
+
+* **User Authentication**: Users can register and login into the website.
+
+* **Recipe managment**: Logged in users can
+- Create and upload recipes.
+- Modify their uploaded recipes.
+- Delete their uploaded recipes.
+
+* **Interaction**: Logged in users can
+- Comment under other recipes.
+- Modify their own comment.
+- Delete their own comment.
+
+* **Rating**: Logged in users can rate other recipes in a 0-5 rating system.
+
+* **Favoriting**: Logged in users can favorite other recipes.
+
+* **Searching**: All users can filter search for recipes.
+
+## 1.3 Constraints
+
+The platform for the webpage is Windows and will be supported by any modern web browser that is available on Windows.
+
+## 1.4 Out of scope features
+
+Rules and regulations, guidelines, recipe recommendation algorithms, direct user support via chat or phone.
+
 # 8. Database Plan
 The database plan defines the tables and their relationships within the system. To ensure data consistency and integrity, the database is designed to meet **Third Normal Form (3NF)** requirements. Additionally, stored procedures may be implemented to streamline and optimize key operations.
 
