@@ -1,7 +1,7 @@
 <?php //Defining the menu structure
     $menu = [
         [
-            'href' => '#',
+            'href' => BASE_URL.'index.php?E=recipes&M=search',
             'title' => 'Search',
             'extra' => ['style' => 'color:red;', 'target' => '_blank'],
         ],

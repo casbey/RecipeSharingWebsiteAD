@@ -1,6 +1,6 @@
 <?php
 
-$public_functions = ['lista', 'more', 'del', 'modify', 'add'];
+$public_functions = ['lista', 'more', 'del', 'modify', 'add', 'search'];
 require_once CORE_DIR.'database_manager.php';
 
 function lista(){
@@ -97,6 +97,6 @@ function search(){
             require_once VIEWS_DIR.'recipes/searchResults.php';
         }
     }
-    
+
 }
 ?>
