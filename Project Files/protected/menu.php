@@ -18,7 +18,11 @@
                  'title' => 'Submit recipe',
               ],
             ]
-        ]
+            ],
+            [
+                'href' => BASE_URL,
+                'title' => 'Home Page',
+            ]
     ];
     require_once CORE_DIR.'views.php';
     print_menu($menu);
