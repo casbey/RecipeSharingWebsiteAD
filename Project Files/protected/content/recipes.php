@@ -81,4 +81,21 @@ function add(){
         header('Location:'.BASE_URL.'?E=recipes&M=lista');
     }
 }
+
+function search(){
+    if(!filter_has_var(INPUT_POST, 'submit') || 
+    filter_input(INPUT_POST, 'submit', FILTER_VALIDATE_INT) != 1 ){
+      $result = FALSE;
+       require VIEWS_DIR.'recipes/search.php';
+    }
+    else{
+        $searchRec = filter_input(INPUT_POST, 'recipesearch', FILTER_SANITIZE_STRING);
+        $searchRecSan = '%'.$searchRec.'%';
+        $result = select('SELECT * FROM recipes WHERE recipename LIKE :recipesearch OR ingredients LIKE :recipesearch', FALSE, [':recipesearch' => $searchRecSan]);
+
+        if ($result){
+            require_once VIEWS_DIR.'recipes/searchResults.php';
+        }
+    }
+}
 ?>
