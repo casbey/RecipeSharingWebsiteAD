@@ -2,7 +2,7 @@
     $menu = [
         [
             'href' => '#',
-            'title' => 'Profile',
+            'title' => 'Search',
             'extra' => ['style' => 'color:red;', 'target' => '_blank'],
         ],
         [

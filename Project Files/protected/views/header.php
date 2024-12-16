@@ -1,2 +1,2 @@
-<h1>Profile</h1>
-<h2>Recipes</h2>
+<h1>Recipe Sharing Website</h1>
+<h2>Actions</h2>
