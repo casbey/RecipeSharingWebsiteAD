@@ -97,5 +97,6 @@ function search(){
             require_once VIEWS_DIR.'recipes/searchResults.php';
         }
     }
+    
 }
 ?>
