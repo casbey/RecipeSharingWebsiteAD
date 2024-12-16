@@ -45,6 +45,7 @@ function del(){
 function modify(){
     if(!filter_has_var(INPUT_POST, 'submit') || 
       filter_input(INPUT_POST, 'submit', FILTER_VALIDATE_INT) != 1 ){
+        $result = FALSE;
          require VIEWS_DIR.'recipes/modify.php';
     }
     else{
@@ -57,11 +58,14 @@ function modify(){
         $result = executeStatement('UPDATE recipes SET recipename = :recipenameM, ingredients = :ingredientsM, servings = :servingsM, instructions = :instructionsM WHERE recipe_id = :recipe_id', 
         [':recipenameM' => $recipenameM, ':ingredientsM' => $ingredientsM, ':servingsM' => $servingsM, ':instructionsM' => $instructionsM, ':recipe_id' => $id]);
     }
-   
+    if($result === TRUE){
+        header('Location:'.BASE_URL.'?E=recipes&M=lista');
+    }
 }
 function add(){
       if(!filter_has_var(INPUT_POST, 'submit') || 
       filter_input(INPUT_POST, 'submit', FILTER_VALIDATE_INT) != 1 ){
+        $result = FALSE;
          require VIEWS_DIR.'recipes/add.php';
     }
     else{
@@ -72,6 +76,9 @@ function add(){
 
         $result = executeStatement('INSERT INTO recipes (recipename, ingredients, servings, instructions) values (:recipenameF, :ingredientsF, :servingsF, :instructionsF)', 
         [':recipenameF' => $recipenameF, ':ingredientsF' => $ingredientsF, ':servingsF' => $servingsF, ':instructionsF' => $instructionsF,]); 
+    }
+    if($result === TRUE){
+        header('Location:'.BASE_URL.'?E=recipes&M=lista');
     }
 }
 ?>
