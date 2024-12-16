@@ -62,12 +62,11 @@ function add(){
          require VIEWS_DIR.'recipes/add.php';
     }
     else{
-        $recipenameT = filter_input(INPUT_POST, 'recipename', FILTER_SANITIZE_STRING);
-        $ingredientsT = filter_input(INPUT_POST, 'ingredients', FILTER_SANITIZE_STRING);
-        $servingsT = filter_input(INPUT_POST, 'servings', FILTER_VALIDATE_INT);
-        $instructionsT = filter_input(INPUT_POST, 'instructions', FILTER_SANITIZE_STRING);
+        $recipenameF = filter_input(INPUT_POST, 'recipename', FILTER_SANITIZE_STRING);
+        $ingredientsF = filter_input(INPUT_POST, 'ingredients', FILTER_SANITIZE_STRING);
+        $servingsF = filter_input(INPUT_POST, 'servings', FILTER_VALIDATE_INT);
+        $instructionsF = filter_input(INPUT_POST, 'instructions', FILTER_SANITIZE_STRING);
     }
-    $result = executeStatement('INSERT INTO recipes (recipename, ingredients, servings, instructions) values (recipenameT, ingredientsT, servingsT, instructionsT)', 
-            ['recipenameT' => $recipenameT, 'ingredientsT' => $ingredientsT, 'servingsT' => $servingsT, 'instructionsT' => $instructionsT]);
+    $result = executeStatement("INSERT INTO recipes ('recipename', 'ingredients', 'servings', 'instructions') values ('$recipenameF', '$ingredientsF', '$servingsF', '$instructionsF')"); 
 }
 ?>
