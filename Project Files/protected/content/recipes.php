@@ -96,6 +96,9 @@ function search(){
         if ($result){
             require_once VIEWS_DIR.'recipes/searchResults.php';
         }
+        else{
+            die("No recipes found");
+        }
     }
 
 }
