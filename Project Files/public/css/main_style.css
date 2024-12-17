@@ -1,0 +1,48 @@
+#greet{
+    color:rgb(39, 69, 104);
+    font-family: "Lexend Deca", "consolas", sans-serif;
+    width:500px;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%); /* Adjusts the position to truly center */
+    text-align: center;
+    text-decoration: wavy underline;
+}
+
+#sz1{
+    color:rgb(39, 69, 104);
+    font-family: "Lexend Deca", "consolas", sans-serif;
+    position:relative;
+    position: absolute;
+    top: 59%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    width:260px;
+    text-align: center;
+    float:left;
+}
+
+#sz2{
+    color:rgb(39, 69, 104);
+    font-family: "Lexend Deca", "consolas", sans-serif;
+    position:relative;
+    position: absolute;
+    top: 71%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    width:500px;
+    text-align: center;
+    float:left;
+}
+
+body{
+    background-image:url("../img/hungry.png");
+    background-color: rgb(216, 186, 151);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    
+}
