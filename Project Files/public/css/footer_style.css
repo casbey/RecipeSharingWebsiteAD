@@ -1,0 +1,10 @@
+#ekke{
+    color:rgb(39, 69, 104);
+    font-family: "Lexend Deca", "consolas", sans-serif;
+    width:100%;
+    position: absolute;
+    bottom: 0;
+    left: 5;
+    padding: 2px 0;
+    border-top: 2px solid rgb(39, 69, 104);
+}

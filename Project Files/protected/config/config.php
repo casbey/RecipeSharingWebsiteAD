@@ -11,7 +11,7 @@ define('DB_PORT', 3306);
 // Basic configuration
 define('CHARSET','utf-8');
 define('TITLE','Recipe Sharing Website');
-define('CSS',['style.css','menu_style.css']);
+define('CSS',['style.css','menu_style.css','footer_style.css']);
 
 // Constants for file location, and other constants
 define('ROOT_DIR','./');
