@@ -1,6 +1,5 @@
 <br/>
-<h2>List of recipes<h2>
-<a href="<?=BASE_URL?>?E=recipes&M=add">Add New Recipe</a>
+<h2 id="main_title">List of recipes</h2>
 <?php if($result === NULL || empty($result)): ?>
 <p>No recipes found</p>
 <?php else: ?>
@@ -17,13 +16,16 @@
         <tr>
             <td><?=$row['recipename']?></td>
             <td>
-                <a href="<?=BASE_URL?>?E=recipes&M=more&P=<?=$row['recipe_id']?>">More</a>
-                <a href="<?=BASE_URL?>?E=recipes&M=modify&P=<?=$row['recipe_id']?>">Modify</a>
-                <a href="<?=BASE_URL?>?E=recipes&M=del&P=<?=$row['recipe_id']?>">Delete</a>
+                <a class="btn btn-info btn-sm me-2" href="<?=BASE_URL?>?E=recipes&M=more&P=<?=$row['recipe_id']?>"><i class="bi bi-eye"></i>More</a>
+                <a class="btn btn-warning btn-sm me-2" href="<?=BASE_URL?>?E=recipes&M=modify&P=<?=$row['recipe_id']?>"><i class="bi bi-pencil-square"></i>Modify</a>
+                <a class="btn btn-danger btn-sm" onclick="return confirm('Are you sure you want to delete this recipe?');" href="<?=BASE_URL?>?E=recipes&M=del&P=<?=$row['recipe_id']?>"><i class="bi bi-trash"></i> Delete</a>
             </td>
         </tr>
         <?php endforeach;?>
     </tbody>
 </table>
+</div>
+<div class="container text-center mt-5">
+    <a class="btn btn-success btn-lg shadow-sm" href="<?=BASE_URL?>?E=recipes&M=add"><i class="bi bi-plus-circle"></i>Add New Recipe</a>
 </div>
 <?php endif; ?>
