@@ -1,7 +1,9 @@
 <br/>
-<h2 id="main_title">List of recipes</h2>
+<h2 class="text-center mt-4 mb-4 fw-bold" id="main_title">List of recipes</h2>
 <?php if($result === NULL || empty($result)): ?>
-<p>No recipes found</p>
+    <div class="alert alert-warning text-center" role="alert">
+        <i class="bi bi-exclamation-circle"></i> No recipes found!
+    </div>
 <?php else: ?>
 <div class="container">
 <table class="table table-hover table-bordered table-striped">
