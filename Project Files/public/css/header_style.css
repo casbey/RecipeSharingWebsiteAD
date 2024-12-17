@@ -1,0 +1,34 @@
+#headerleft{
+    color:rgb(250, 170, 59);
+    font-family: "Lexend Deca", "consolas", sans-serif;
+    width: 310px;
+    text-align: center;
+    font-weight: bolder;
+    border-style:outset;
+    border-width: 5px;
+    border-color: rgb(31, 75, 124);
+    background-color: rgb(31, 75, 124);
+    border-radius: 10px;
+    padding-left: 2px;
+    padding-right: 2px;
+    font-size: 40px;
+}
+#headerright{
+    float:right;
+    position:relative;
+    bottom: 120px;
+    right: 50px;
+    width: 500px;
+    color:rgb(39, 69, 104);
+    font-family: "Lexend Deca", "consolas", sans-serif;
+    font-weight: bold;
+    text-decoration: rgb(31, 75, 124) underline 3px;
+}
+img{
+    width: 150px;
+    height: 150px;
+    float: right;
+    position: relative;
+    left: 500px;
+    bottom: 180px;
+}
