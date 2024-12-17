@@ -1,9 +1,10 @@
 <br/>
-<h2>List of recipes</h2>
+<h2>List of recipes<h2>
 <a href="<?=BASE_URL?>?E=recipes&M=add">Add New Recipe</a>
 <?php if($result === NULL || empty($result)): ?>
 <p>No recipes found</p>
 <?php else: ?>
+<div class="container">
 <table>
     <thead>
         <tr>
@@ -24,4 +25,5 @@
         <?php endforeach;?>
     </tbody>
 </table>
+</div>
 <?php endif; ?>
