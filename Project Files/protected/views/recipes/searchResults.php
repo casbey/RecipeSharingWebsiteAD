@@ -16,7 +16,7 @@
         <tr>
             <td><?=$row['recipename']?></td>
             <td>
-            <a class="btn btn-info btn-sm me-2" href="<?=BASE_URL?>?E=recipes&M=more&P=<?=$row['recipe_id']?>"> <i class="bi bi-eye"></i>More</a>
+                <a class="btn btn-info btn-sm me-2" href="<?=BASE_URL?>?E=recipes&M=more&P=<?=$row['recipe_id']?>"> <i class="bi bi-eye"></i>More</a>
             </td>
         </tr>
         <?php endforeach;?>
