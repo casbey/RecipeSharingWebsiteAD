@@ -3,7 +3,8 @@
 <?php if($result === NULL || empty($result)): ?>
 <p>No recipes found</p>
 <?php else: ?>
-<table>
+<div class="container">
+<table class="table table-hover table-bordered table-striped">
     <thead>
         <tr>
             <th>Name</th>

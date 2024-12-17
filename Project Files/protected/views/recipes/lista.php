@@ -5,7 +5,7 @@
 <p>No recipes found</p>
 <?php else: ?>
 <div class="container">
-<table>
+<table class="table table-hover table-bordered table-striped">
     <thead>
         <tr>
             <th>Name</th>
