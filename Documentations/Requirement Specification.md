@@ -1,14 +1,14 @@
 # 1. Introduction
 
 ## 1.1 Purpose: 
-The purpose of this web platform to upload, search and share food recipes amongst the users and to rate and favorite those said recipes and the ability to comment under the recipes their opinions, etc.
+The purpose of this web platform to upload, search and share food recipes amongst the users.
 
 ## 1.2 Scope: 
 * **The web platform will include the following functionalities:**
-user authentication, recipe managment(creating, uploading, modifying, deleting), commenting, rating, favoriting, recipe searching with filters
+recipe managment(creating, uploading, modifying, deleting), recipe searching(by name, by ingredient).
     
 * **The constraints of the web platform:**
-The web page will be supported by Windows and will be usable via any web browser windows can run
+The web page will be supported by Windows and will be usable via any modern web browser windows can run.
 
 * **The following functionalities will be excluded from the project:**
 regulations, guidelines, recipe recommendation algorithms, direct user support via chat or phone
@@ -30,15 +30,12 @@ This chapter will describe in more detail of any other non-functional requiremen
 # 2. Overall Description
 
 ## 2.1 Product Perspective
-The Recipe Sharing Website is a standalone web platform, designed for users to share, and discover new recipes from other users. The three core systems that allows the functioning of the website are the frontend interface used for user interactions, the backend API for the business logic, and a database for storing and managing user information, recipes, and the outcome of user interactions such as comments and ratings.
+The Recipe Sharing Website is a standalone web platform, designed for users to share, and discover new recipes from other users. The three core systems that allows the functioning of the website are the frontend interface used for user interactions, the backend API for the business logic, and a database for storing recipes.
 
 ## 2.2 Product Functions
 The platform offers the following main functions:
-* User registration and login
 * Recipe control (submission, editing, viewing, deletion)
-* Search enginge via name, ingredients, or rating
-* User interactions with other recipes (comment, favourite, rating)
-* User profile management (viewing, update)
+* Search enginge via name, ingredients.
 
 ## 2.3 User Classes and Characteristics
 The website is designed for an audience expert in cooking, or interested in trying out new recipes.
@@ -47,52 +44,34 @@ The website is designed for an audience expert in cooking, or interested in tryi
 * **Home Cooks**: The type of users who already have an intermediate knowledge about cooking, and are just trying to share their experience on the website and look for alternatives of cooking their dishes. \
 <br/><br/>
 
-We can divide the users into two classes on the website:
-1. **Registered users**: The users who passed the age of 18 and are also registered to the website. They can manage their profile, and have the benefit of uploading recipes and interacting with other uploaded recipes.
-2. **Guests**: Unregistered users, who can only look at the uploaded recipes, and use the search function, but they cannot interract with other recipes or upload.
+* **The user can:** create, upload, modify and delete their own recipes, and can search for other recipes by the name of the dish or by the name of an ingredient of it.
 
 ## 2.4 Constraints
 The recipe sharing website follows the following constraints:
 * The recipe form description must be limited to 5000 characters (with spaces) 
 * The website must support 100 users at least
 * It must be compatible with the modern web browers, and must support access from mobile devices as well
-* Security measures in terms of password hashing must be developed
 
 ## 2.5 Assumptions and Dependecies
 * The user must enter the website through a modern web browser and devices.
 * The user must maintain stable internet connection when using the website.
 
 ## 2.6 System Environment
-* **Client Side**: Google Chrome, Mozzila Firefox, Microsoft Edge, and Safari web browers, and any modern device
+* **Client Side**: Google Chrome, Mozzila Firefox, Microsoft Edge, and any modern device
 * **Server Side**: Apache webserver, PHP 7.x for server-side requests, MySQL databse, and Git for version control
 
 # 3. System features
 
-## 3.1 User authentication
-* **Description:** Users can sign up, log in and manage their accounts.
-* **Functional requirements:** Users can create an account, users can log in via email/username and password, (password recovery maybe??).
-* **Non-functional requirements:** User password protection and managable time for login/logout.
-
-## 3.2 Recipe managment
-* **Description:** Users can upload, edit and delete recipes.
+## 3.1 Recipe managment
+* **Description:** Users can create, upload, edit and delete recipes.
 * **Functional requirements:** Users can add a new recipe, users can edit their own existing recipes and recipe information includes the title, description, ingredients and steps.
-* **Non-functional requirements:** Support for larger images and swiftly manage the database.
+* **Non-functional requirements:** Swiftly manage the database.
 
-## 3.3 Recipe search
+## 3.2 Recipe search
 * **Description:** Search recipes by names and ingredients.
-* **Functional requirements:** User can search for recipes by name, user can filter search with ingredients.
+* **Functional requirements:** User can search for recipes by name, and ingredient names.
 * **Non-functional requirements:** Fast and accurate search results.
     
-## 3.4 Rating and commenting
-* **Description:** Users can rate recipes and comment under them.
-* **Functional requirements:** Users can leave comments under recipes, users can rate recipes on a scale from 1-5.
-* **Non-functional requirements:** Comments loaded in in a managable time and real-time update for ratings.
-    
-## 3.5 Favorites
-* **Description:** Users can mark recipes as their favorites for easy access later.
-* **Functional requirements:** Users can favorite recipes, users can access their favorite recipes in a favorite list.
-* **Non-Functional requirements:** Favorite list loading time should be fast and not depending on the size of the list.
-
 # 4. External Interface Requirements
 
 ## 4.1 User Interfaces
