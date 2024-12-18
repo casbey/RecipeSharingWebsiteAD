@@ -308,6 +308,29 @@ On the client side, we are focusing on minimal UI components without complex str
 * index.html: This HTML file includes basic page layouts for home, recipe detail, upload page, etc.
 * Basic CSS: Styles a simple single stylesheet, focusing on layout and responsiveness.
 
+# 10. Test Plan
+
+## 10.1 Unit Testing
+
+* Test individual PHP scripts and backend APIs:
+* Validate inputs for recipe creation, and search.
+* Verify CRUD operations on recipes are executed correctly in the database.
+
+## 10.2 Integration Testing
+
+### Test the interaction between the frontend and backend:
+* Ensure user actions on the frontend trigger the correct backend operations.
+* Validate the flow of data from the database to the frontend and back.
+
+### Test recipe search functionality:
+* Ensure search results are accurate and correctly formatted.
+* Test with partial matches, case-insensitive queries, and no matches.
+
+## 10.3 Performance Testing
+
+* Test website response time for common actions (e.g., search, recipe creation).
+* Validate database query performance under normal load.
+
 # 11. Maintenance Plan
 The main focus for us in the maintenance plan is to outline the process and methods for updating the website, ensuring it remains functional, secure, and up-to-date. Bye maintenance activities we mean bug fixes, enhancements, and version upgrades. Testing plans for maintenance activities are also defined to ensure system stability and quality. This maintenance plan will be implemented once an initial version has been deployed and subsequent versions are planned.
 
