@@ -21,6 +21,51 @@ The platform for the webpage is Windows and will be supported by any modern web 
 
 Rules and regulations, guidelines, recipe recommendation algorithms, direct user support via chat or phone.
 
+# 2. Project Plan
+
+## 2.1 Project Objective
+To create a website where users can create, upload, modify and delete their own recipes and search for others with a dish name or an ingredient name.
+
+## 2.2 System Architecture and Design
+
+### Frontend:
+
+* **Framework:** HTML, CSS, JavaScript (or a library like React for better user experience).
+
+### Backend:
+
+* **Server:** XAMPP with Apache.
+
+* **Language:** PHP.
+
+### Database:
+
+* **MySQL** (using XAMPP for local database management).
+
+## 2.3 Testing and Quality Assurance Plan
+
+### Unit Testing:
+
+Test each PHP script or endpoint for correct responses.
+
+### Integration Testing:
+
+Ensure frontend and backend communication works seamlessly.
+
+### User Testing:
+
+Verify the user can perform all intended actions without errors.
+
+## 2.4 Deployment and Maintenance Plan
+
+### Deployment:
+
+Run the application on the XAMPP Apache server.
+
+### Maintenance:
+
+Regularly test functionality and apply fixes as needed.
+
 # 3. Requirements
 
 ## 3.1 Functional requirements
