@@ -6,23 +6,12 @@ The purpose of this paragraph is to define the scope of this website.
 
 ## 1.2 In scope features
 
-* **User Authentication**: Users can register and login into the website.
-
 * **Recipe management**: Logged in users can
 - Create and upload recipes.
 - Modify their uploaded recipes.
 - Delete their uploaded recipes.
 
-* **Interaction**: Logged in users can
-- Comment under other recipes.
-- Modify their own comment.
-- Delete their own comment.
-
-* **Rating**: Logged in users can rate other recipes in a 0-5 rating system.
-
-* **Favoriting**: Logged in users can favorite other recipes.
-
-* **Searching**: All users can filter search for recipes.
+* **Searching**: All users can search for recipes via dish names and ingredient names.
 
 ## 1.3 Constraints
 
@@ -38,38 +27,23 @@ Rules and regulations, guidelines, recipe recommendation algorithms, direct user
 
 These requirements describe the core functionalities the system must support.
 
-### User authentication
-
-- Users can register via an email and a password.
-- Users cam login and logout securely.
-- Users can recover their password via email.
-
 ### Recipe management
 
-* **Logged in users can:**
+* **Users can:**
 - Create their own recipe with:
    - Title.
    - Ingredients.
    - Preparation steps.
 - Edit or delete their own recipe.
 
-### Interaction
-* **Logged in users can:**
-- Rate recipes through a 1-5 rating system.
-- Comment, modify their own and delete their own comments under other recipes.
-- Favorite other recipes.
-
 ### Search
 * **All users can:**
-- Search for any recipe with filters.
+- Search for any recipe with dish names and ingredient names.
 
 ### Acces control
-* **Guests:**
+* **All users:**
 - Can search for and view recipes.
-- Can not post, modify, delete recipes, can not use the comment, rating and favoriting systems.
-* **Logged in users:**
-- Can search for and view recipes.
-- Can use the recipe management, comment, rating, favoriting systems.
+- Can use the recipe management system.
 
 ## 3.2 Non-functional requirements
 
@@ -82,7 +56,6 @@ These requirements describe the core functionalities the system must support.
 - The platform should have an intuitive interface with clear navigation.
 
 ### Security
-- Passwords must be securely hashed and stored.
 - Implement input validation to prevent XSS and SQL injection.
 - Only recipe creators can edit or delete their own recipes.
 
