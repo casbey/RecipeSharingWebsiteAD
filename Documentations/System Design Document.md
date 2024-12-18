@@ -154,9 +154,6 @@ Here in this subchapter, we define the tables and relationships and their in-dep
 Stored procedures are used to simplify and secure repetitive database operations, such as adding a new recipe, retrieving comments, and calculating average ratings. These help optimize database performance and reduce risks of SQL injection.
 
 * AddRecipe(userId, title, ingredients, instructions): Inserts a new recipe into the Recipes table linked to a user.
-* GetRecipeComments(recipeId): Retrieves all comments for a specified recipe.
-* CalculateAverageRating(recipeId): Calculates the average rating for a recipe based on existing ratings in the Ratings table.
-* AddFavorite(userId, recipeId): Adds a recipe to a user’s favorites in the Favorites table.
 
 ## 8.3 SQL Script for the Physical Data Model Generation
 This SQL script provides the necessary commands to generate the database structure, including table creation, primary and foreign key definitions, and setting up relationships. The script ensures a seamless deployment of the database schema and allows for easy replication or modification if needed.
