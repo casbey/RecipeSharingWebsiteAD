@@ -80,10 +80,9 @@ The primary interface components include:
 * **Home Page**: Display popular and recently uploaded recipes. Users can search by recipe name or ingredients directly from this page.
 * **Recipe Detail Page**: Shows the recipe, including the list of ingredients, instructions, images, ratings, comments, and a "Favourite" button.
 * **User Profile Page**: Displays the user’s uploaded recipes, favourite recipes, and account details.
-* **Login and Signup Forms**: Simple and clean forms to allow users to register or log in with email and password.
 * **Recipe Upload Form**: A form where users can enter recipe details (name, ingredients, instructions, etc.). \
 Wireframes and Mockups:
-1. **Wireframes**: Preliminary wireframes will outline the layout and flow of each page. These will show the placement of elements like the search bar, recipe cards, comments section, and form inputs.
+1. **Wireframes**: Preliminary wireframes will outline the layout and flow of each page. These will show the placement of elements like the search bar, recipe cards, and form inputs.
 2. **Mockups**: Full-color mockups, adhering to a modern design style, will demonstrate how the final UI will appear, including typography, colors, and button styles. \
 <br/><br/>
 
@@ -94,7 +93,7 @@ Design Considerations:
 ## 4.2 Hardware Interfaces
 The Recipe Sharing Website will require hardware resources both for user interactions and for backend operations. The following hardware interfaces will be utilized:
 * **Web Server**: An Apache web server will host the application and serve web pages to users.
-* **Database Server**: A MySQL database will be used to store user accounts, recipe data, comments, ratings, and favorites. \
+* **Database Server**: A MySQL database will be used to store recipe data. \
 Hardware Requirements:
 * **CPU and Memory**: The web and database servers should be configured to handle at least 100 concurrent users, with scalable hardware resources (CPU, memory) depending on the load.
 * **Backup Hardware**: Routine database and file backups will be stored in a secondary cloud location to ensure data persistence and disaster recovery.
@@ -108,15 +107,11 @@ Some software components and third-party services will be integrated into the Re
 ## 4.4 Communication Interfaces
 The Recipe Sharing Website will use the following communication protocols to ensure secure and efficient interaction between the client, server, and external services:
 * **HTTPS** (Hypertext Transfer Protocol Secure): All communication between the client (user) and the server will be encrypted using HTTPS. This will ensure the protection of user data, including login credentials and personal information.
-* **RESTful API**: The backend server will expose a RESTful API that will communicate with the frontend using JSON over HTTP. This API will handle all CRUD (Create, Read, Update, Delete) operations for recipes, users, comments, and ratings.
 
 # 5. System Attributes
 This section outlines the key attributes that the Recipe Sharing Website will adhere to, including security, performance, scalability, usability, maintainability, and portability.
 ## 5.1 Security
 The Recipe Sharing Website will prioritize user data protection through robust security measures. Key security implementations include:
-* **Password Encryption**: User passwords will be hashed using strong algorithms before being stored in the database. This ensures that even if the database is compromised, passwords remain secure.
-* **HTTPS Encryption**: All data transmitted between the user and the server will be encrypted using HTTPS to prevent eavesdropping and data tampering.
-* **Authentication & Authorization**: Only authenticated users will be allowed to upload, rate, and comment on recipes. Authorization mechanisms will ensure users can only access and modify their own data.
 * **Data Backup**: Daily backups of critical user data and recipes will be performed and securely stored on cloud storage to ensure data recovery in case of an incident.
 
 ## 5.2 Performance
@@ -132,12 +127,11 @@ The Recipe Sharing Website will be designed with scalability in mind, enabling i
 ## 5.4 Usability
 The platform’s design will prioritize usability and user experience (UX). The key usability features include:
 * **Intuitive Navigation**: The user interface (UI) will feature a simple, easy-to-navigate structure. Menus and buttons will be clearly labeled, and the flow between pages (e.g., from browsing recipes to commenting or favouriting) will be smooth and intuitive.
-* **Responsive Design**: The website will be fully responsive, meaning it will automatically adjust to different screen sizes and devices (e.g., desktops, tablets, and smartphones).
 * **Clear Error Messaging**: Whenever errors occur (e.g., incorrect login details, missing form fields), clear and helpful error messages will be displayed to guide users on how to fix the issue.
 
 ## 5.5 Maintainability
 The Recipe Sharing Website will be designed for ease of maintenance, allowing for regular updates and bug fixes without disruption to the user experience:
-* **Modular Codebase**: The application will follow a modular design structure, allowing developers to update or modify individual components (e.g., recipe management, user profiles) without affecting the entire system.
+* **Modular Codebase**: The application will follow a modular design structure, allowing developers to update or modify individual components (e.g., recipe management) without affecting the entire system.
 * **Version Control**: All code will be maintained in a Git repository allowing for easy tracking of changes, collaboration among team members, and rollback capabilities if issues arise.
 * **Documentation**: Comprehensive documentation, including API documentation, database schemas, and deployment guides, will be provided to ensure that future developers can easily understand and maintain the system.
 
@@ -145,28 +139,23 @@ The Recipe Sharing Website will be designed for ease of maintenance, allowing fo
 Portability will be a core feature of the Recipe Sharing Website, ensuring that the platform can be accessed from various devices and environments. Key portability considerations include:
 * **Cross-Device Compatibility**: The website will be compatible with multiple devices, including desktops, laptops, tablets, and smartphones, with optimized layouts for different screen sizes.
 * **Cross-Browser Support**: The website will function smoothly across all modern web browsers, including Google Chrome, Mozilla Firefox, Safari, and Microsoft Edge.
-* **Mobile-Friendly Design**: The site will be optimized for touch interfaces on mobile devices, ensuring that users can interact with the site (e.g., browsing, uploading recipes) just as effectively on mobile as on desktop.
 
 # 6. Other Non-functional Requirements
 This chapter captures additional non-functional requirements related to legal compliance and data management, ensuring the system adheres to all necessary regulations and handles data responsibly.
 
 ## 6.1 Legal or Regulatory Requirements
 The Recipe Sharing Website will adhere to all relevant legal and regulatory requirements, particularly regarding user privacy and data protection. The key considerations are:
-* **Data Consent**: Users will be required to provide explicit consent before their personal information (e.g., name, email) is collected or used. A clear privacy policy will explain how user data is handled.
-* **Right to Access and Deletion**: Users will have the ability to view and request the deletion of their personal data (such as profiles and comments) at any time. This will be managed through a user dashboard where users can access and manage their data.
+* **Right to Access and Deletion**: Users will have the ability to view and request the deletion of their recipes at any time.
 * **Copyright and Intellectual Property Laws**: Users who upload recipes will agree to a terms of service policy that clarifies their ownership of the content they share. Users will be notified that the platform is not liable for any copyright infringements in uploaded recipes.
 * **User-generated Content**: Recipe authors will maintain ownership of their content, but they will grant the platform a non-exclusive license to display and distribute their recipes on the site.
 
 ## 6.2 Data Management Requirements
 The Recipe Sharing Website will have robust data management practices in place to ensure efficient storage, retrieval, and protection of user data and content. The following measures will be implemented:
 1. **Data Storage**:
-* **User Profiles**: User profiles will include data such as usernames, email addresses, passwords. All sensitive information will be stored in a secure, encrypted format in the database (MySQL).
 * **Recipes**: Each recipe will be stored with information such as title, ingredients, instructions, user ratings, and comments. Recipes will be indexed to allow for efficient searching by title or ingredients.
-* **Comments**: Comments on recipes will be associated with both the recipe and the user who posted them. They will be stored in a relational database with appropriate foreign key relationships.
-* **Favourites**: Users will be able to save recipes to their favourites. This data will be stored in a user’s profile and will allow easy retrieval from the database.
-* **Data Retention**: User data, including profiles and recipes, will be retained for as long as users remain active on the platform. Inactive users (i.e., those who do not log in for over a year) may be contacted, and if necessary, their accounts will be archived or deleted based on their preferences.
+* **Data Retention**: User data, including recipes, will be retained for as long as users remain active on the platform.
 2. **Data Integrity and Consistency**:
-The system will enforce data validation rules to ensure that the data entered by users is complete and in the correct format (e.g., valid email addresses, non-empty recipe fields).
+The system will enforce data validation rules to ensure that the data entered by users is complete and in the correct format.
 
 # 7. Appendix
 
@@ -174,7 +163,6 @@ The system will enforce data validation rules to ensure that the data entered by
 This section defines key terms and concepts used throughout the SRS document.
 * **UI (User Interface)**: The visual components through which a user interacts with the website, such as buttons, forms, and menus.
 * **UX (User Experience)**: The overall experience a user has when interacting with the website, including ease of use, accessibility, and performance.
-* **API (Application Programming Interface)**: A set of functions and procedures allowing different software applications to communicate with each other.
 
 ## 7.2 External Resources and References
 * **Bootstrap**: The front-end framework used for responsive design. \
