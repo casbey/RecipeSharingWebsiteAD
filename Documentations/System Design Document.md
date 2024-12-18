@@ -6,7 +6,7 @@ The purpose of this paragraph is to define the scope of this website.
 
 ## 1.2 In scope features
 
-* **Recipe management**: Logged in users can
+* **Recipe management**: Users can
 - Create and upload recipes.
 - Modify their uploaded recipes.
 - Delete their uploaded recipes.
@@ -57,7 +57,6 @@ These requirements describe the core functionalities the system must support.
 
 ### Security
 - Implement input validation to prevent XSS and SQL injection.
-- Only recipe creators can edit or delete their own recipes.
 
 ### Scalability
 The website will be designed with scalability in mind, enabling it to handle increased traffic and data growth over time. The system will allow:
@@ -107,14 +106,9 @@ The project will be hosted locally on a development machine or a shared server u
 
 * **MySQL Database**:
   - Used to store:
-    - User data
     - Recipe data
 * **Tables**:
-- Users
 - Recipes
-- Comments
-- Ratings
-- Favorites
 
 ## 5.2 Network configuration
 
@@ -147,57 +141,14 @@ The database plan defines the tables and their relationships within the system. 
 Here in this subchapter, we define the tables and relationships and their in-depth structures:
 
 ### Tables:
-* **Users**: Stores information about each user, including their login details and profile information.
 * **Recipes**: Stores details of each recipe uploaded by users.
-* **Comments**: Stores comments left by users on recipes.
-* **Ratings**: Stores user ratings for each recipe, allowing an average rating to be calculated.
-* **Favorites**: Tracks recipes that users have marked as favorites.
 
-1. **Users**
-* user_id (PK, INT, AUTO_INCREMENT): Unique identifier for each user.
-* username (VARCHAR): Username of the user.
-* email (VARCHAR): Email address for the user.
-* password (VARCHAR): Hashed password for user security.
-* created_at (TIMESTAMP): Timestamp of when the user registered.
-
-2. **Recipes** 
+1. **Recipes** 
 * recipe_id (PK, INT, AUTO_INCREMENT): Unique identifier for each recipe.
-* user_id (FK, INT): ID of the user who uploaded the recipe, linking to Users.user_id.
-* title (VARCHAR): Recipe title.
+* recipename (VARCHAR): Name of the recipe.
 * ingredients (TEXT): List of ingredients.
+* servings (TINYINT): Number of servings.
 * instructions (TEXT): Cooking instructions.
-* created_at (TIMESTAMP): Timestamp of when the recipe was added.
-
-3. **Comments** 
-* comment_id (PK, INT, AUTO_INCREMENT): Unique identifier for each comment.
-* user_id (FK, INT): ID of the user who made the comment, linking to Users.user_id.
-* recipe_id (FK, INT): ID of the recipe being commented on, linking to Recipes.recipe_id.
-* content (TEXT): The comment content.
-* created_at (TIMESTAMP): Timestamp of when the comment was made.
-
-4. **Ratings**
-* rating_id (PK, INT, AUTO_INCREMENT): Unique identifier for each rating.
-* user_id (FK, INT): ID of the user who rated, linking to Users.user_id.
-* recipe_id (FK, INT): ID of the rated recipe, linking to Recipes.recipe_id.
-* rating (TINYINT): Rating given by the user (1 to 5 scale).
-* created_at (TIMESTAMP): Timestamp of when the rating was given.
-
-5. **Favorites**
-* favorite_id (PK, INT, AUTO_INCREMENT): Unique identifier for each favorite entry.
-* user_id (FK, INT): ID of the user who favorited the recipe, linking to Users.user_id.
-* recipe_id (FK, INT): ID of the favorited recipe, linking to Recipes.recipe_id.
-* created_at (TIMESTAMP): Timestamp of when the recipe was marked as favorite.
-
-### Entity-Relationship Diagram (ERD):
-Each Foreign Key relationship connects as follows:
-
-* **Users → Recipes**: user_id in Recipes references user_id in Users (One-to-Many, since a user can upload multiple recipes).
-* **Users → Comments**: user_id in Comments references user_id in Users (One-to-Many, since a user can leave multiple comments).
-* **Users → Ratings**: user_id in Ratings references user_id in Users (One-to-Many, since a user can rate multiple recipes).
-* **Users → Favorites**: user_id in Favorites references user_id in Users (One-to-Many, since a user can favorite multiple recipes).
-* **Recipes → Comments**: recipe_id in Comments references recipe_id in Recipes (One-to-Many, since each recipe can have multiple comments).
-* **Recipes → Ratings**: recipe_id in Ratings references recipe_id in Recipes (One-to-Many, since each recipe can have multiple ratings).
-* **Recipes → Favorites**: recipe_id in Favorites references recipe_id in Recipes (One-to-Many, since each recipe can be favorited by multiple users).
 
 ## 8.2 Stored Procedures
 Stored procedures are used to simplify and secure repetitive database operations, such as adding a new recipe, retrieving comments, and calculating average ratings. These help optimize database performance and reduce risks of SQL injection.
@@ -213,51 +164,13 @@ This SQL script provides the necessary commands to generate the database structu
 ### The script:
 
 ``` SQL
- CREATE TABLE Users ( 
-    user_id INT PRIMARY KEY AUTO_INCREMENT, 
-    username VARCHAR(50) UNIQUE NOT NULL, 
-    email VARCHAR(100) UNIQUE NOT NULL, 
-    password VARCHAR(255) NOT NULL, 
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP 
- ); 
-
- CREATE TABLE Recipes ( 
-    recipe_id INT PRIMARY KEY AUTO_INCREMENT, 
-    user_id INT NOT NULL, 
-    title VARCHAR(255) NOT NULL, 
-    ingredients TEXT NOT NULL, 
-    instructions TEXT NOT NULL, 
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP, 
-    FOREIGN KEY (user_id) REFERENCES Users(user_id) ON DELETE CASCADE 
- ); 
-
- CREATE TABLE Comments ( 
-    comment_id INT PRIMARY KEY AUTO_INCREMENT, 
-    user_id INT NOT NULL, 
-    recipe_id INT NOT NULL, 
-    content TEXT NOT NULL, 
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP, 
-    FOREIGN KEY (user_id) REFERENCES Users(user_id) ON DELETE CASCADE, 
-    FOREIGN KEY (recipe_id) REFERENCES Recipes(recipe_id) ON DELETE CASCADE 
- ); 
-
- CREATE TABLE Ratings ( 
-    rating_id INT PRIMARY KEY AUTO_INCREMENT, 
-    user_id INT NOT NULL, 
-    recipe_id INT NOT NULL, 
-    rating TINYINT CHECK (rating BETWEEN 1 AND 5), 
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP, 
-    FOREIGN KEY (user_id) REFERENCES Users(user_id) ON DELETE CASCADE, 
-    FOREIGN KEY (recipe_id) REFERENCES Recipes(recipe_id) ON DELETE CASCADE 
- );
-
- CREATE TABLE Favorites ( 
-    favorite_id INT PRIMARY KEY AUTO_INCREMENT, 
-    user_id INT NOT NULL, 
-    recipe_id INT NOT NULL, 
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP, 
-    FOREIGN KEY (user_id) REFERENCES Users(user_id) ON DELETE CASCADE, 
-    FOREIGN KEY (recipe_id) REFERENCES Recipes(recipe_id) ON DELETE CASCADE 
+ CREATE TABLE recipes ( 
+    recipe_id INT NOT NULL AUTO_INCREMENT, 
+    recipename VARCHAR(255) NOT NULL, 
+    ingredients VARCHAR(255) NOT NULL,
+    servings TINYINT NOT NULL DEFAULT 1,
+    instructions VARCHAR(500) NOT NULL, 
+    CONSTRAINT PK_recipes PRIMARY KEY(recipe_id)
  );
  ``` 
 
@@ -267,28 +180,23 @@ In the implementation plan we define the classes required to realize the system'
 Since it is a simplified design, we consolidate data interactions into just one or two classes, reducing redundancy.
 
 * **DatabaseHandler**: A single class to manage database connections and execute queries. It handles common operations like retrieving user data, adding recipes, fetching comments, and so on. It contains methods like:
-* fetchData(table, conditions): Generic function to retrieve data from any table.
-* insertData(table, data): Inserts data into specified table.
-* updateData(table, data, conditions): Updates records based on conditions.
+* select(table, row_base, conditions): Generic function to retrieve data from any table.
+* executeStatement(table, conditions): Generic function to execute SQL statements.
 
 ## 9.2 Business Logic Layer
 A single Service class manages most of the logic for this kind of website. This class handles operations related to recipes, comments, ratings, and favorites without the need to separate them into different services.
 
-* **RecipeService**: This class would handle the core functionality of the site:
-* createRecipe(): Validates inputs and creates a new recipe.
-* searchRecipes(): Allows searching by name or ingredient.
-* rateRecipe(): Handles ratings, calculates averages.
-* addFavorite(): Adds a recipe to user favorites.
+* **Recipes**: This class would handle the core functionality of the site:
+* create(): Validates inputs and creates a new recipe.
+* search(): Allows searching by name or ingredient.
+* del(): Deletes the recipe.
+* modify(): Edits the recipe.
+* more(): Opens a more detailed view about the recipe.
 
 ## 9.3 Client-Side Layer
 On the client side, we are focusing on minimal UI components without complex structures.
 
 * index.html: This HTML file includes basic page layouts for home, recipe detail, upload page, etc.
-* JavaScript Functions: Keeps functions in a single file (e.g., scripts.js) to handle UI logic and interactions. Some example functions:
-1. displayRecipeList(): Renders a list of recipes.
-2. viewRecipeDetail(): Displays detailed view when a recipe is clicked.
-3. submitRecipe(): Handles recipe upload.
-4. searchRecipes(): Filters recipes based on search criteria.
 * Basic CSS: Styles a simple single stylesheet, focusing on layout and responsiveness.
 
 # 11. Maintenance Plan
