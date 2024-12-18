@@ -196,6 +196,34 @@ The project will be hosted locally on a development machine or a shared server u
   - Use phpMyAdmin to export the database as an SQL file regularly.
   - Store backups in a secure folder or a cloud service like Google Drive.
 
+# 6. Abstract Domain Model
+
+## 6.1 Entities
+
+### User
+   -user_id
+### Recipes
+   -recipe_id
+   -recipename
+   -ingredients
+   -servings
+   -instructions
+
+## 6.2 Relationships
+
+* **User to Recipes:** One-to-Many
+A user can create multiple recipes.
+Each recipe is owned by a single user.
+
+## 6.3 Interactions
+
+* **Recipe Management**
+Create, update, and delete recipes based on user actions.
+
+* **Search**
+Search recipes by dish name or ingredients.
+Return matched recipes and details for user browsing.
+
 # 8. Database Plan
 The database plan defines the tables and their relationships within the system. To ensure data consistency and integrity, the database is designed to meet **Third Normal Form (3NF)** requirements. Additionally, stored procedures may be implemented to streamline and optimize key operations.
 
