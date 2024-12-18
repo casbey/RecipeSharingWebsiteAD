@@ -119,6 +119,23 @@ The codebase will be modular, easy to see through and documented for ease of upd
 - Apache will provide the web server for the system.
 - MySQL will provide the database server for the system.
 
+# 4. Functional Plan
+
+## 4.1 Recipe Management
+
+* **Users can create a new recipe by providing:**
+-Dish name.
+-Ingredients.
+-Steps for preparation.
+-Recipes are stored in the database and linked to the user who created them.
+-Users can edit their recipes to update ingredients or steps.
+-Users can delete their recipes.
+
+## 4.2 Search results display:
+-Dish name.
+-A list of recipes that match the search criteria.
+-Users can view the full recipe details by clicking on a search result.
+
 # 5. Physical environment
 
 ## 5.1. Hosting enviroment
