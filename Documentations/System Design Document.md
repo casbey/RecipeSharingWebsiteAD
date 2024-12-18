@@ -224,6 +224,28 @@ Create, update, and delete recipes based on user actions.
 Search recipes by dish name or ingredients.
 Return matched recipes and details for user browsing.
 
+# 7. Architectural plan
+
+## 7.1 Frontend
+-Technology Stack: HTML, CSS.
+* **Responsibilities:**
+   * User interface for creating, updating, and deleting recipes.
+   * Responsive design for recipe browsing and management.
+   * Search input and results display for recipes.
+
+## 7.2 Backend
+-Technology Stack: PHP running on XAMPP’s Apache server.
+* **Responsibilities:**
+   * Perform CRUD operations on the Recipes table.
+   * Process search queries for dish names or ingredients.
+   * Communicate with the MySQL database to fetch and store data.
+
+## 7.3 Database
+-Technology Stack: MySQL (local instance via XAMPP).
+* **Responsibilities:**
+   * Store recipe data including ingredients, instructions, and metadata.
+   * Ensure data integrity and support indexed searches for performance.
+
 # 8. Database Plan
 The database plan defines the tables and their relationships within the system. To ensure data consistency and integrity, the database is designed to meet **Third Normal Form (3NF)** requirements. Additionally, stored procedures may be implemented to streamline and optimize key operations.
 
