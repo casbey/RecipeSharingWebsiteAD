@@ -3,7 +3,7 @@
 The aim of this project is to create a **Recipe Sharing Platform** where users can upload their favourite recipes, and search for recipes shared by other users.
 
 ## Requirements
-1. **PHP(Laravel)** - For all the functionalities and management.
+1. **PHP** - For all the functionalities and management.
 2. **MySQL** - For the database management.
 3. **HTML, CSS, JavaScript** - For designing and setting up the website.
 4. **Github/Git** - For version control and collaboration.
